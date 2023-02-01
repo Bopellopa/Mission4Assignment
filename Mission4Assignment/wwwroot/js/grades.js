@@ -25,7 +25,9 @@
     } else {
         grade = "E";
     }
-    alert("overall grade: " + grade);
+    //$("#finalgrade").val() = grade
+    //alert("overall grade: " + grade);
+    $("#finalgrade").html(grade)
     
 
 
