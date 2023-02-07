@@ -1,0 +1,26 @@
+﻿@*this page has code that should be common across all the pages as well as the bootstrap, js, and jquery*@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/x-icon" href="img/icon.png" />
+    <title>@ViewData["title"]</title>
+    <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/default.css" rel="stylesheet" />
+</head>
+<body>
+    <nav>
+        <a asp-controller="Blah" asp-action="Index">Home</a>
+        <a asp-controller="Blah" asp-action="GradeC">Grade Calculator</a>
+    </nav>
+    <div>
+        @RenderBody()
+    </div>
+
+    <script src="lib/bootstrap/js/bootstrap.min.js"></script>
+    <script src="lib/bootstrap/js/jquery/jquery-3.6.3.min.js"></script>
+
+</body>
+</html>

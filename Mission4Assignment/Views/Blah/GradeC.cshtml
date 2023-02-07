@@ -1,0 +1,31 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@*links to model*@
+@model GradeCModel;
+
+@*form to enter information and calculate grade*@
+<h2>Calculate Grade</h2>
+<form method="post">
+    @*asp-for connects to the model and asp-validation-summary applies the conditions we made*@
+    <label>Grade of assignments(in percentage):</label>
+    <input id="assn" asp-for="assn" /><br />
+    <label>Grade of group project(in percentage):</label>
+    <input id="gp" asp-for="gp"/><br />
+    <label>Grade of quizzes(in percentage):</label>
+    <input id="quiz" asp-for="quiz"/><br />
+    <label>Grade of midterm(in percentage):</label>
+    <input id="mid" asp-for="mid"/><br />
+    <label>Grade of final(in percentage):</label>
+    <input id="final" asp-for="final"/><br />
+    <label>Grade of intex(in percentage):</label>
+    <input id="intex" asp-for="intex"/><br />
+    <input id="grades" type="submit" value="submit" />
+    <label>Overall Grade:</label>
+    <label id="finalgrade"> </label>
+    <div asp-validation-summary="All"></div>
+</form>
+
+<script src="js/grades.js"></script>

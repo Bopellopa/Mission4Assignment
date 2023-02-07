@@ -1,4 +1,5 @@
-﻿$("#grades").click(function () {
+﻿////jQuery code to combine grades entered and calculate letter grade
+$("#grades").click(function () {
     totalscore = (parseInt($("#assn").val()) + parseInt($("#gp").val()) + parseInt($("#quiz").val()) + parseInt($("#mid").val()) + parseInt($("#final").val()) + parseInt($("#intex").val()))/6;
     if (totalscore >= 94) {
         grade = "A";
@@ -27,6 +28,8 @@
     }
     //$("#finalgrade").val() = grade
     //alert("overall grade: " + grade);
+
+    //write overall letter grade on page
     $("#finalgrade").html(grade)
     
 
